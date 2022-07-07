@@ -28,6 +28,10 @@ resource "aws_instance" "dev" {
     # name com sufixo do número da máquina (1, 2 ou 3)
     Name = "AluraTerraform${count.index}"
   }
+  # associação das instâncias com o Security Group 'acesso_ssh' 
+  # OBS: ele retira outros grupos que por ventura já estejam associados
+  # mantendo apenas o array
+  vpc_security_group_ids = ["sg-04bb4798212084571"]
 }
 
 # Criação de um Security Group para permitir o acesso SSH nas instâncias criadas
