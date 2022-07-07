@@ -1,0 +1,11 @@
+# dados de autenticação na AWS para conseguir criar a máquina e demais recursos
+alura-terraform-aws-credentials.csv
+# chaves a serem inseridas na máquina criada
+sshkeys
+# arquivo que guarda estado Terraform e pode conter informações sensíveis
+terraform.tfstate
+
+.terraform
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+terraform.tfstate.backup
