@@ -31,7 +31,7 @@ resource "aws_instance" "dev" {
   # associação das instâncias com o Security Group 'acesso_ssh' 
   # OBS: ele retira outros grupos que por ventura já estejam associados
   # mantendo apenas o array
-  vpc_security_group_ids = ["sg-04bb4798212084571"]
+  vpc_security_group_ids = ["sg-0154114ef6671912e"]
 }
 
 # Criação de um Security Group para permitir o acesso SSH nas instâncias criadas
@@ -43,8 +43,8 @@ resource "aws_security_group" "acesso_ssh" {
     from_port = 22
     to_port   = 22
     protocol  = "tcp"
-    # restringindo o acesso a um IP específico
-    cidr_blocks = ["189.40.94.62/32"]
+    # restringindo o acesso a um conjunto de IPs específicos
+    cidr_blocks = ["189.40.94.62/32", "45.180.54.252/32"]
   }
 
   egress {
