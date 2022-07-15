@@ -10,3 +10,4 @@ Terraform AWS Project
 7. Iniciar o projeto terraform com `terraform init`
 8. Verificar o que será criado (dry-run) `terraform plan`
 9. Executar efetivamente o provisionamento `terraform apply`
+10. Para apagar um recurso específico `terraform destroy --target <nome do recurso>`
